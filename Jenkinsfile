@@ -9,7 +9,7 @@ pipeline {
             steps {
                 sh 'echo "Hello World"'
                 sh 'echo "${Greeting} there"'
-                sh 'echo "Password is ${inflobox_password}"'
+                sh 'echo "${inflobox_password} it is.."'
             }
         }
     }
