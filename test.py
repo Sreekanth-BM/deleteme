@@ -1,6 +1,12 @@
+import argparase
+
 print("hey, I'm from python")
 print("Added second line")
 
-# variables
-var1 = input("Enter a variable")
-print(var1)
+p = argparse.ArgumentParser()
+
+p.add_argument('--var1',type='str', required=True, help='Just a var')
+
+args = p.parse_args()
+
+print(args.var1)
