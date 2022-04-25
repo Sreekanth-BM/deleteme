@@ -10,6 +10,12 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+  - script: python -m pip install --upgrade pip setuptools wheel
+    displayName: 'Installing pip'
+
+  - script: pip install argparse
+    displayName: 'Installing packages'
+
   - task: PythonScript@0
     inputs:
       scriptSource: 'filePath'
