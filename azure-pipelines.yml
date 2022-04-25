@@ -10,5 +10,8 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: python test.py
-  displayName: 'Running a singe script from my repo'
+  - task: PythonScript@0
+    inputs:
+      scriptSource: 'filePath'
+      scriptPath: 'test.py'
+      arguments: '--var1 $(VAR1)'
