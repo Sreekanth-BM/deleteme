@@ -15,6 +15,8 @@ steps:
 
   - script: pip install argparse
     displayName: 'Installing packages'
+  
+  - script: echo $(password)
 
   - task: PythonScript@0
     inputs:
