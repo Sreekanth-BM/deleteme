@@ -12,5 +12,9 @@ pipeline {
                 sh 'echo "${inflobox_password} it is.."'
             }
         }
+        stage('Python stuff') {
+          sh 'python --version'
+          sh 'python hello.py'
+        }
     }
 }
