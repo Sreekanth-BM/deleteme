@@ -1,6 +1,6 @@
 pipeline {
-  // agent any
-  agent { docker { image 'python:latest' } }
+  agent any
+//   agent { docker { image 'python:latest' } }
   parameters {
       string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
       password(name: 'inflobox_password', defaultValue: 'abcd1234', description: 'Its a password')
@@ -15,8 +15,8 @@ pipeline {
       }
       stage('Python stuff') {
         steps {
-          sh 'python --version'
-          sh 'python hello.py'
+          sh 'python3 --version'
+          sh 'python3 hello.py'
         }
 
       }
