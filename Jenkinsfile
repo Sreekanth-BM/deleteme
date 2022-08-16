@@ -6,15 +6,18 @@ pipeline {
     }    
     stages {
         stage('Echoing') {
-            steps {
-                sh 'echo "Hello World"'
-                sh 'echo "${Greeting} there"'
-                sh 'echo "${inflobox_password} it is.."'
-            }
+          steps {
+            sh 'echo "Hello World"'
+            sh 'echo "${Greeting} there"'
+            sh 'echo "${inflobox_password} it is.."'
+          }
         }
         stage('Python stuff') {
-          sh 'python --version'
-          sh 'python hello.py'
+          steps {
+            sh 'python --version'
+            sh 'python hello.py'
+          }
+
         }
     }
 }
