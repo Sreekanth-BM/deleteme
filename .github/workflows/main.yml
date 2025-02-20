@@ -12,3 +12,8 @@ jobs:
         run: echo "Hello there..!"
       - name: Display about OS info
         run: cat /etc/*release*
+      - name: Dispaly the github context
+        run: echo "${{ github }}"
+      - name: Dispaly the github context with expression
+        run: echo "${{ toJSON(github) }}"
+
