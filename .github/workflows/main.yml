@@ -1,0 +1,14 @@
+name: nothing here
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greeting
+        run: echo "Hello there..!
+      - name: Display about OS info
+        run: cat /etc/*release*
